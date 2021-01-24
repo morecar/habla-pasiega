@@ -4,7 +4,7 @@ Este repo contiene una digitalización a LaTeX (PDF) del libro "El Habla Pasiega
 ## ¿Por qué?
 El objetivo es ofrecer al autor y su familia la posibilidad de una reimpresión, y acabar con la especulación en el mercado de segunda mano. 
 
-## Cómo compiilar este proyecto a PDF
+## Cómo compilar este proyecto a PDF
 Prerrequisitos:
 - `pdflatex`, viene con las distribucionies LaTeX, [descarga aquí la tuya](https://www.latex-project.org/get/). 
 - Una copia de este repositorio. 
