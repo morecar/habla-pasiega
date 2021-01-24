@@ -1,0 +1,43 @@
+\babel@toc {spanish}{}
+\contentsline {part}{INTRODUCCIÓN}{5}%
+\contentsline {chapter}{\numberline {\es@scroman {i}}LOS MONTES DE PAS Y SU HABLA}{5}%
+\contentsline {section}{\numberline {A}\emph {Situación geográfica}}{5}%
+\contentsline {subsection}{\numberline {§ 1}}{5}%
+\contentsline {subsection}{\numberline {§ 2}}{6}%
+\contentsline {section}{\numberline {B}\emph {Comunicaciones}}{7}%
+\contentsline {subsection}{\numberline {§ 3}}{7}%
+\contentsline {section}{\numberline {C}\emph {Relaciones humanas}}{8}%
+\contentsline {subsection}{\numberline {§ 4}}{8}%
+\contentsline {section}{\numberline {D}\emph {Características económicas}}{9}%
+\contentsline {subsection}{\numberline {§ 5}}{9}%
+\contentsline {subsection}{\numberline {§ 6}}{10}%
+\contentsline {section}{\numberline {E}\emph {Aspecto de las poblaciones y características de los habitantes}}{12}%
+\contentsline {subsection}{\numberline {§ 7}}{12}%
+\contentsline {section}{\numberline {F}\emph {Historia. El origen de los pasiegos}}{13}%
+\contentsline {subsection}{\numberline {§ 8}}{13}%
+\contentsline {subsection}{\numberline {§ 9}}{14}%
+\contentsline {subsection}{\numberline {§ 10}}{16}%
+\contentsline {section}{\numberline {G}\emph {Estado actual del dialecto}}{18}%
+\contentsline {subsection}{\numberline {§ 11}}{18}%
+\contentsline {chapter}{\numberline {\es@scroman {ii}}LA ENCUESTA}{21}%
+\contentsline {section}{\numberline {A}\emph {Propósito}}{21}%
+\contentsline {subsection}{\numberline {§ 12}}{21}%
+\contentsline {section}{\numberline {B}\emph {La comarca estudiada}}{22}%
+\contentsline {subsection}{\numberline {§ 13}}{22}%
+\contentsline {section}{\numberline {C}\emph {Condiciones y métodos de la encuesta.}}{24}%
+\contentsline {subsection}{\numberline {§ 14}}{24}%
+\contentsline {section}{\numberline {D}\emph {El cuestionario.}}{26}%
+\contentsline {subsection}{\numberline {§ 15}}{26}%
+\contentsline {section}{\numberline {E}\emph {Los sujetos.}}{26}%
+\contentsline {subsection}{\numberline {§ 16}}{26}%
+\contentsline {chapter}{\numberline {\es@scroman {iii}}BIBLIOGRAFÍA Y ABREVIATURAS}{31}%
+\contentsline {section}{\numberline {A}\emph {Historia, geografía, etc.}}{31}%
+\contentsline {subsection}{\numberline {§ 17}}{31}%
+\contentsline {section}{\numberline {B}\emph {Léxico, etimología, etc.}}{32}%
+\contentsline {subsection}{\numberline {§ 18}}{32}%
+\contentsline {section}{\numberline {C}\emph {Monografías dialectológicas.}}{35}%
+\contentsline {subsection}{\numberline {§ 19}}{35}%
+\contentsline {section}{\numberline {D}\emph {Otros trabajos de dialectología.}}{38}%
+\contentsline {subsection}{\numberline {§ 19}a}{38}%
+\contentsline {section}{\numberline {E}\emph {Obras generales.}}{41}%
+\contentsline {subsection}{\numberline {§ 19}b}{41}%
