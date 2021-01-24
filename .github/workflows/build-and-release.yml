@@ -1,6 +1,11 @@
 on:
   push:
     branches: [ $default-branch ]
+  workflow_dispatch:
+    inputs:
+      foo:
+        description: 'bar'
+        required: false
 
 jobs:
   build:
