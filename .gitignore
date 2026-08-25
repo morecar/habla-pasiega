@@ -1,2 +1,7 @@
+__pycache__/
+*.py[cod]
+*.aux
+*.log
+*.out
 *.pdf
-.DS_Store
+sources/thesis-1967/ocr/
