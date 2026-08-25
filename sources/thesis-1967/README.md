@@ -1,7 +1,6 @@
 # Tesis de 1967: importación provisional
 
-Esta carpeta contiene la extracción de la capa OCR de
-`PennyRJ_1967redux.pdf`, facilitado por Ralph J. Penny.
+Esta carpeta contiene la extracción de la capa OCR de un PDF del libro.
 
 El OCR no es texto canónico. Contiene errores graves en diacríticos,
 transcripción fonética, formas pasiegas, nombres propios, guiones y estructura
