@@ -6,14 +6,14 @@ El objetivo es ofrecer al autor y su familia la posibilidad de una reimpresión,
 
 ## Cómo compilar este proyecto a PDF
 Prerrequisitos:
-- `pdflatex`, viene con las distribucionies LaTeX, [descarga aquí la tuya](https://www.latex-project.org/get/). 
+- `pdflatex`, viene con las distribuciones LaTeX, [descarga aquí la tuya](https://www.latex-project.org/get/).
 - Una copia de este repositorio. 
 
 Desde la línea de comandos, en el directorio raíz:
 ```bash
 $ pdflatex el-habla-pasiega.tex
 ```
-Si quieres actializar la tabla de contenidos (fichero `.top`, el índice) deberás correr el comando dos veces para que se reflejen los cambios. 
+Si quieres actualizar la tabla de contenidos (fichero `.toc`, el índice) deberás correr el comando dos veces para que se reflejen los cambios.
 
 Si sólo quieres el documento en el estado más moderno, intentaré que se compile el documento automáticamente tras cada nueva contribución y se publique en la sección de *Releases*. 
 
@@ -24,6 +24,11 @@ Existen tres formas fundamentales en las que puedes contribuir:
 * Con el propio formato en LaTeX. Esto es, de lejos, el documento de LaTeX más complejo que yo he hecho.
 
 Si has encontrado una errata, simplemente contáctame y yo mismo lo arreglaré. 
+
+Para documentar el cotejo con el libro físico de 1969, consulta el
+[checklist de fotografías y revisión](docs/checklist-libro-fisico.md). La capa
+OCR de la tesis de 1967 se importa por separado en `sources/thesis-1967` y no se
+considera una transcripción fiable hasta que haya sido revisada.
 
 ## Cómo ponerse en contacto conmigo
 La opción más fácil es por Twitter, en [@morecar89](https://twitter.com/morecar89), o un email a [igualquetwitter]@gmail.com.
