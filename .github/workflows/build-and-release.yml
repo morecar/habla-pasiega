@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Descargar el repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Compilar LaTeX
         uses: xu-cheng/latex-action@v4
@@ -24,7 +24,7 @@ jobs:
           root_file: el-habla-pasiega.tex
 
       - name: Guardar el PDF de la compilación
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: el-habla-pasiega
           path: el-habla-pasiega.pdf
@@ -40,7 +40,7 @@ jobs:
 
     steps:
       - name: Recuperar el PDF compilado
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: el-habla-pasiega
 
