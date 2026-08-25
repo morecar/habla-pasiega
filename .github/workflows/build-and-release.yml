@@ -1,43 +1,58 @@
+name: Construir y publicar el PDF
+
 on:
+  pull_request:
   push:
-    branches: [ $default-branch ]
+    branches:
+      - main
   workflow_dispatch:
-    inputs:
-      foo:
-        description: 'bar'
-        required: false
 
 jobs:
   build:
-    name: Build and release new version
+    name: Compilar el documento
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
 
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v2
+      - name: Compilar LaTeX
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: el-habla-pasiega.tex
-          working_directory: "."
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Guardar el PDF de la compilación
+        uses: actions/upload-artifact@v4
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
-          draft: false
-          prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset 
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          name: el-habla-pasiega
+          path: el-habla-pasiega.pdf
+          if-no-files-found: error
+
+  release:
+    name: Publicar una nueva edición
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Recuperar el PDF compilado
+        uses: actions/download-artifact@v4
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./el-habla-pasiega.pdf
-          asset_name: el-habla-pasiega.pdf
-          asset_content_type: application/pdf
+          name: el-habla-pasiega
+
+      - name: Crear la release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: edicion-${{ github.run_number }}
+          RELEASE_TITLE: Edición automática ${{ github.run_number }}
+        run: >-
+          gh release create "$RELEASE_TAG"
+          el-habla-pasiega.pdf
+          --repo "$GITHUB_REPOSITORY"
+          --target "$GITHUB_SHA"
+          --title "$RELEASE_TITLE"
+          --generate-notes
