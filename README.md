@@ -18,7 +18,7 @@ Desde la línea de comandos, en el directorio raíz de este repositorio:
 $ pdflatex el-habla-pasiega.tex
 ```
 
-Si sólo quieres el documento en el estado más completo, este repositorio se compila automáticamente cada vez que se produce un cambio, puedes encontrar la información en la sección *Releases*. 
+Cada pull request comprueba automáticamente que el documento se puede compilar. Cuando un cambio llega a la rama `main`, se genera una nueva edición numerada y el PDF resultante se publica en la sección [Releases](../../releases/latest).
 
 ## Cómo ponerse en contacto conmigo
 La opción más fácil es [un email](mailto:morecar89@gmail.com).
