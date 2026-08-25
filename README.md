@@ -2,33 +2,23 @@
 Este repo contiene una digitalización a LaTeX (PDF) del libro "El Habla Pasiega" (Londres, 1969) de Ralph J. Penny.
 
 ## ¿Por qué?
-El objetivo es ofrecer al autor y su familia la posibilidad de una reimpresión, y acabar con la especulación en el mercado de segunda mano. 
+El objetivo es:
+1. ofrecer al autor y su familia la posibilidad de una reimpresión, y acabar con la especulación en el mercado de segunda mano de una obra fundamental para la difusión del patrimonio lingüístico pasiego.
+2. Re-editar la obra transliterándola automaticamente al Alfabeto Fonético Internacional y a texto plano, lo que permitirá su uso por lingüistas sin el conocimiento del viejo alfabeto de la Revista de Filología Española (RFE) y por el publico general, respectivamente. 
+3. Poner a disposición de la comunidad una digitalización de calidad del corpus contenido en esta obra, que pueda ser base para la creación de otros contenidos, como un diccionario descriptivo o un corpus digital. 
+
 
 ## Cómo compilar este proyecto a PDF
 Prerrequisitos:
 - `pdflatex`, viene con las distribuciones LaTeX, [descarga aquí la tuya](https://www.latex-project.org/get/).
 - Una copia de este repositorio. 
 
-Desde la línea de comandos, en el directorio raíz:
+Desde la línea de comandos, en el directorio raíz de este repositorio:
 ```bash
 $ pdflatex el-habla-pasiega.tex
 ```
-Si quieres actualizar la tabla de contenidos (fichero `.toc`, el índice) deberás correr el comando dos veces para que se reflejen los cambios.
 
-Si sólo quieres el documento en el estado más moderno, intentaré que se compile el documento automáticamente tras cada nueva contribución y se publique en la sección de *Releases*. 
-
-## Cómo contribuir
-Existen tres formas fundamentales en las que puedes contribuir:
-* Transcribiendo texto. El libro se estructura por párrafos; yo te pasaría un escaneado de un párrafo y tú me devolverías texto. Te dejo escoger el párrafo, van por temática.
-* Digitalizando imágenes. El libro contiene unas pocas imágenes, fundamentalmente mapas y algún diagrama o dibujo. Son dibujos a mano alzada del autor. Yo te pasaría un escaneo y me devolverías un SVG. Te dejo escoger el dibujo.
-* Con el propio formato en LaTeX. Esto es, de lejos, el documento de LaTeX más complejo que yo he hecho.
-
-Si has encontrado una errata, simplemente contáctame y yo mismo lo arreglaré. 
-
-Para documentar el cotejo con el libro físico de 1969, consulta el
-[checklist de fotografías y revisión](docs/checklist-libro-fisico.md). La capa
-OCR de la tesis de 1967 se importa por separado en `sources/thesis-1967` y no se
-considera una transcripción fiable hasta que haya sido revisada.
+Si sólo quieres el documento en el estado más completo, este repositorio se compila automáticamente cada vez que se produce un cambio, puedes encontrar la información en la sección *Releases*. 
 
 ## Cómo ponerse en contacto conmigo
-La opción más fácil es por Twitter, en [@morecar89](https://twitter.com/morecar89), o un email a [igualquetwitter]@gmail.com.
+La opción más fácil es [un email](mailto:morecar89@gmail.com).
