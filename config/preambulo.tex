@@ -77,6 +77,11 @@
   {}{0pt}{}
 \titlespacing*{\part}{0pt}{58mm}{0pt}
 
+% Pies tipográficos de las láminas cartográficas, como en la edición impresa.
+\newcommand{\mapcaption}[2]{%
+  {\normalfont\fontsize{9pt}{11.34pt}\selectfont Mapa #1:\hspace{5mm}#2\par}%
+}
+
 
 
 \newcommand{\uc}{\includegraphics[trim=0.0em 0.15ex 0.0em 0.0em, clip, width=0.50em]{images/chars/u_central.eps}}
