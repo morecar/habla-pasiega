@@ -42,6 +42,7 @@
 \AtBeginDocument{\fontsize{9pt}{11.34pt}\selectfont}
 \setlength{\parindent}{5mm}
 \setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
 \frenchspacing
 
 % Cabeceras alternas de la edición: referencias de párrafo hacia el lomo,
@@ -57,7 +58,7 @@
 % 8,5 mm entre líneas base; el texto ordinario no añade espacio entre párrafos.
 \titleformat{\subsection}[runin]
   {\normalfont\fontsize{9pt}{11.34pt}\selectfont}
-  {\thesubsection}{4mm}{}
+  {\thesubsection\hspace{4mm}}{0pt}{}
 \titlespacing*{\subsection}{5mm}{4.5mm}{0pt}
 
 \titleformat{\chapter}[display]
