@@ -50,15 +50,16 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           LAST_EDITION="$(
-            gh release list
-            --repo "$GITHUB_REPOSITORY"
-            --limit 1000
-            --json tagName
-            --jq '.[].tagName | select(test("^edicion-[0-9]+$")) | sub("^edicion-"; "") | tonumber'
-            | sort -n
+            gh release list \
+              --repo "$GITHUB_REPOSITORY" \
+              --limit 1000 \
+              --json tagName \
+              --jq '.[].tagName | select(test("^edicion-[0-9]+$")) | sub("^edicion-"; "") | tonumber' \
+            | sort -n \
             | tail -1
           )"
-          NEXT_EDITION="$(("${LAST_EDITION:-0}" + 1))"
+          LAST_EDITION="${LAST_EDITION:-0}"
+          NEXT_EDITION="$((LAST_EDITION + 1))"
           echo "number=$NEXT_EDITION" >> "$GITHUB_OUTPUT"
 
       - name: Crear la release
