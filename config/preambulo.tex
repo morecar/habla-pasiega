@@ -17,6 +17,8 @@
 ]{geometry}
 \usepackage{newtxtext}
 \usepackage{tipa}
+\usepackage[unicode,hidelinks]{hyperref}
+\usepackage{accsupp}
 \usepackage{titlesec}
 \usepackage{footnote}
 \usepackage{amsmath}
@@ -80,6 +82,15 @@
 % Pies tipográficos de las láminas cartográficas, como en la edición impresa.
 \newcommand{\mapcaption}[2]{%
   {\normalfont\fontsize{9pt}{11.34pt}\selectfont Mapa #1:\hspace{5mm}#2\par}%
+}
+
+% Dialect forms keep a searchable Unicode representation while preserving
+% Penny's original phonetic notation visually. Either argument may contain
+% a single word or a complete phrase.
+\newcommand{\dialectform}[2]{%
+  \BeginAccSupp{method=pdfstringdef,unicode,ActualText={#1}}%
+    \textipa{#2}%
+  \EndAccSupp{}%
 }
 
 
