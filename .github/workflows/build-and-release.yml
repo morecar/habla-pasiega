@@ -44,11 +44,28 @@ jobs:
         with:
           name: el-habla-pasiega
 
+      - name: Calcular el número de edición
+        id: edition
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          LAST_EDITION="$(
+            gh release list
+            --repo "$GITHUB_REPOSITORY"
+            --limit 1000
+            --json tagName
+            --jq '.[].tagName | select(test("^edicion-[0-9]+$")) | sub("^edicion-"; "") | tonumber'
+            | sort -n
+            | tail -1
+          )"
+          NEXT_EDITION="$(("${LAST_EDITION:-0}" + 1))"
+          echo "number=$NEXT_EDITION" >> "$GITHUB_OUTPUT"
+
       - name: Crear la release
         env:
           GH_TOKEN: ${{ github.token }}
-          RELEASE_TAG: edicion-${{ github.run_number }}
-          RELEASE_TITLE: Edición automática ${{ github.run_number }}
+          RELEASE_TAG: edicion-${{ steps.edition.outputs.number }}
+          RELEASE_TITLE: Edición automática ${{ steps.edition.outputs.number }}
         run: >-
           gh release create "$RELEASE_TAG"
           el-habla-pasiega.pdf
