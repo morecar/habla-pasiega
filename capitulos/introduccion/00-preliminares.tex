@@ -15,6 +15,13 @@
 \clearpage
 \thispagestyle{empty}
 \begin{center}
-  \includegraphics[width=\textwidth,height=0.92\textheight,keepaspectratio]{images/mapa1.png}
+  \makebox[\textwidth][c]{%
+    \begin{minipage}{140mm}
+      \centering
+      \includegraphics[trim=0 400bp 0 0,clip,width=140mm,height=170mm,keepaspectratio]{images/mapa1.png}
+      \par\vspace{3mm}
+      \mapcaption{1}{Situación geográfica.}
+    \end{minipage}%
+  }
 \end{center}
 \clearpage
