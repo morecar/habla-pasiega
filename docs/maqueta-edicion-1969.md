@@ -37,3 +37,6 @@ Esta ficha recoge las medidas tomadas directamente sobre un ejemplar físico de 
 - Los mapas ocupan páginas de lámina independientes; el mapa 2 conserva la orientación transversal del original.
 
 Las cifras pequeñas son aproximaciones de una impresión de 1969 y deben validarse por comparación visual, no interpretarse como tolerancias industriales.
+## Láminas cartográficas
+
+Los pies de los mapas se componen en la tipografía del texto, como en el libro: «Mapa 1: Situación geográfica.», «Mapa 2: Comunicaciones.» y «Mapa 3: Comarca estudiada.». El rótulo manuscrito del escaneo queda recortado, sin alterar el dibujo cartográfico.
