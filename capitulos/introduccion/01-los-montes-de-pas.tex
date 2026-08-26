@@ -23,7 +23,16 @@ Las carreteras que atraviesan nuestra zona (mapa 2) son de construcción moderna
 \clearpage
 \thispagestyle{empty}
 \begin{center}
-  \includegraphics[width=\textwidth,height=0.92\textheight,keepaspectratio]{images/mapa2.png}
+  \makebox[\textwidth][c]{%
+    \rotatebox{90}{%
+      \begin{minipage}{165mm}
+        \centering
+        \includegraphics[angle=270,trim=0 0 300bp 0,clip,width=155mm]{images/mapa2.png}
+        \par\vspace{3mm}
+        \mapcaption{2}{Comunicaciones.}
+      \end{minipage}%
+    }%
+  }
 \end{center}
 \clearpage
 
