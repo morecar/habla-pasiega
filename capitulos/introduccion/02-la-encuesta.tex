@@ -17,7 +17,16 @@ Lo único que se puede notar, lo cual está indicado arriba (§ 4), es cierta di
 \clearpage
 \thispagestyle{empty}
 \begin{center}
-  \includegraphics[width=\textwidth,height=0.92\textheight,keepaspectratio]{images/mapa3.png}
+  \makebox[\textwidth][c]{%
+    \rotatebox{90}{%
+      \begin{minipage}{155mm}
+        \centering
+        \includegraphics[trim=0 350bp 0 0,clip,width=155mm,height=124mm,keepaspectratio]{images/mapa3.png}
+        \par\vspace{3mm}
+        \mapcaption{3}{Comarca estudiada.}
+      \end{minipage}%
+    }%
+  }
 \end{center}
 \clearpage
 
