@@ -3,5 +3,6 @@ __pycache__/
 *.aux
 *.log
 *.out
+*.toc
 *.pdf
 sources/thesis-1967/ocr/
