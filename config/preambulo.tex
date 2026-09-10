@@ -104,3 +104,28 @@
 \newcommand{\apt}{\begingroup\setbox0=\hbox{\includegraphics[trim=0em 0.15ex 0.0em 0.0em,clip,width=0.45em]{images/chars/a_palatal_tilde.eps}}\parbox{\wd0}{\box0}\endgroup}
 
 \newcommand{\adp}{\begingroup\setbox0=\hbox{\includegraphics[trim=0em 0.0em 0.0em -4em,clip,width=0.45em]{images/chars/a_doblepalatal.eps}}\parbox{\wd0}{\box0}\endgroup}
+
+% Composable symbols for Penny's RFE transcription. Stress and length are
+% independent because either one can occur without the other. The mixed
+% vowels retain the facsimile-derived glyphs already used by the edition.
+\newcommand{\rfeStress}[1]{\'{#1}}
+\newcommand{\rfeLong}{:}
+\newcommand{\rfeMixedI}{\ic}
+\newcommand{\rfeMixedU}{\uc}
+\newcommand{\rfePalatalA}{\apt}
+\newcommand{\rfeStressedGlyph}[1]{%
+  \leavevmode
+  \begingroup
+    \setbox0=\hbox{#1}%
+    \ooalign{%
+      \hfil\raisebox{0.32ex}{\textipa{\'{\phantom{i}}}}\hfil\cr
+      \box0\cr
+    }%
+  \endgroup
+}
+\newcommand{\rfeStressedMixedI}{\rfeStressedGlyph{\rfeMixedI}}
+\newcommand{\rfeStressedMixedU}{\rfeStressedGlyph{\rfeMixedU}}
+\newcommand{\rfeStressedPalatalA}{\rfeStressedGlyph{\rfePalatalA}}
+\newcommand{\rfeRelaxedPalatal}{\textsubring{e}}
+\newcommand{\rfeRelaxedClosed}{\textsubring{i}}
+\newcommand{\rfeVeryPalatal}{\textsubwedge{e}}
