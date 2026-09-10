@@ -98,14 +98,15 @@ def main() -> None:
         "",
         "## Formas etiquetadas",
         "",
-        "| § | Lectura RFE control | Unicode buscable | Código TeX |",
-        "|---:|---|---|---|",
+        "| § | Original de Penny (lectura de control) | Unicode buscable | Código TeX | Resultado PDF |",
+        "|---:|---|---|---|---|",
     ]
     for paragraph, reading, searchable, typeset in rows:
         escaped_tex = typeset.replace("|", r"\|")
+        output_page = "37" if paragraph in {"21 bis", "22"} else "37-38" if paragraph == "23" else "38"
         lines.append(
             f"| {paragraph} | `{reading}` | `{searchable}` | `\\dialectform"
-            f"{{{searchable}}}{{{escaped_tex}}}` |"
+            f"{{{searchable}}}{{{escaped_tex}}}` | compilación 44, p. {output_page} |"
         )
     lines.extend(["", f"Total: **{len(rows)} formas etiquetadas**.", ""])
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
